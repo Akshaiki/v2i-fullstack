@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 
-const API = "http://localhost:5000";
 
 // ─── Auth Context ─────────────────────────────────────────────────────────────
 function useAuth() {
