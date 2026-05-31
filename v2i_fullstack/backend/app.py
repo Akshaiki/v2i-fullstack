@@ -12,8 +12,8 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "v2i-secret-2024")
-CORS(app, resources={r"/*": {"origins": "*"}})
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+CORS(app, origins="*", supports_credentials=True)
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading", logger=False, engineio_logger=False)
 
 # ─── Simple user store (replace with DB in production) ─────────
 USERS = {
