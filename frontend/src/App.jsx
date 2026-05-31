@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 
-const API = "https://v2i-fullstack-production.up.railway.app";
+const API = "https://v2i-fullstack.onrender.com";
 
 // ─── Auth Context ─────────────────────────────────────────────────────────────
 function useAuth() {
