@@ -261,4 +261,4 @@ if __name__ == "__main__":
     t = threading.Thread(target=scan_loop, daemon=True)
     t.start()
     print("🚦 V2I Backend running on http://localhost:5000")
-    socketio.run(app, host="0.0.0.0", port=5000, debug=False)
+    socketio.run(app, host="0.0.0.0", port=5000, debug=False, allow_unsafe_werkzeug=True)
